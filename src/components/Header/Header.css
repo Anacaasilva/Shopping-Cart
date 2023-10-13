@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: #FFF159;
+}
+
+.header > div {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
