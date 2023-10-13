@@ -1,12 +1,12 @@
 .searchBar {
+  gap: 13px;
   width: 100%;
   display: flex;
   max-width: 500px;
+  padding-right: 13px;
   background-color: #FFFFFF;
   justify-content: space-between;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  gap: 13px;
-  padding-right: 13px;
 }
 
 .searchInput {
@@ -20,10 +20,10 @@
 }
 
 .searchButton {
-  background: none;
   border: none;
+  color: #333;
   font-size: 1rem;
+  background: none;
   align-items: center;
   justify-content: center;
-  color: #333;
 }

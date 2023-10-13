@@ -1,7 +1,7 @@
 import './SearchBar.css';
-
+/** @name Dependencies */
 import React, { useState } from 'react';
-
+/** @name External */
 import { BsSearch } from 'react-icons/bs';
 
 export const SearchBar = () => {
