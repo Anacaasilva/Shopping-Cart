@@ -1,20 +1,23 @@
 import './ProductCard.css';
 
 import React from 'react';
+import propTypes from 'prop-types';
 import { BsCartPlus } from 'react-icons/bs';
+import { formatCurrency } from '../../utils/formatCurrency';
 
-export const ProductCard = () => {
+export const ProductCard = ({ data }) => {
+
+	const { title, thumbnail, price } = data;
 	return (
 		<section className="productCard">
 			<img
-				src="https://http2.mlstatic.com/D_916682-MLA47782359266_102021-W.jpg"
+				src={thumbnail.replace(/\w\.jpg/gi, 'W.jpg')}
 				alt="product"
 				className="cardImg"
 			/>
-
 			<div className="cardInfos">
-				<h2 className="cardPrice">R$200,00</h2>
-				<h2 className="cardTitle">Iphonee</h2>
+				<h2 className="cardPrice">{formatCurrency(price, 'BRL')}</h2>
+				<h2 className="cardTitle">{title}</h2>
 			</div>
 
 			<button
@@ -26,3 +29,7 @@ export const ProductCard = () => {
 		</section>
 	);
 };
+
+ProductCard.propTypes = {
+	data: propTypes.shape({}),
+}.isRequired;
