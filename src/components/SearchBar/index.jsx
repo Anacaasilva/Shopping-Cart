@@ -1,18 +1,34 @@
 import './SearchBar.css';
 /** @name Dependencies */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 /** @name External */
 import { BsSearch } from 'react-icons/bs';
+import { fetchProducts } from '../../api/fetchProducts';
+/** @name Internal */
+import { AppContext } from '../../context/AppContext';
 
 export const SearchBar = () => {
+
+	const { setProducts, setLoading } = useContext(AppContext);
 	const [searchValue, setSearchValue] = useState('');
 
+	const handleSearch = (event) => {
+		event.preventDefault();
+		setLoading(true);
+
+		const products = fetchProducts(searchValue);
+
+		setProducts(products);
+		setLoading(false);
+		setSearchValue('');
+	};
+
 	return (
-		<form className="searchBar">
+		<form className="searchBar" onSubmit={handleSearch}>
 			<input
 				type="search"
 				value={searchValue}
-				placeholder="Buscar pordutos"
+				placeholder="Buscar produtos"
 				className="searchInput"
 				onChange={({ target }) => setSearchValue(target.value)}
 				required
