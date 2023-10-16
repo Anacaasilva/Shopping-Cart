@@ -13,7 +13,7 @@ export const Products = () => {
 			setProducts(response);
 			console.log(products);
 		});
-
+		
 	}, []);
 
 	return (
