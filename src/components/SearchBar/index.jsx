@@ -16,11 +16,12 @@ export const SearchBar = () => {
 		event.preventDefault();
 		setLoading(true);
 
-		const products = fetchProducts(searchValue);
-
-		setProducts(products);
-		setLoading(false);
-		setSearchValue('');
+		fetchProducts(searchValue)
+			.then(products => {
+				setProducts(products);
+				setLoading(false);
+				setSearchValue('');
+			});
 	};
 
 	return (
