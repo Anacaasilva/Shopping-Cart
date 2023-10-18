@@ -5,14 +5,17 @@ import { AppContext } from './AppContext';
 
 export const Provider = ({ children }) => {
 
-	const [loading, setLoading] = useState(true);
 	const [products, setProducts] = useState([]);
+	const [cartItems, setCartItems] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	const value = {
 		products,
 		setProducts,
 		loading, 
 		setLoading,
+		cartItems,
+		setCartItems,
 	};
 
 	return (

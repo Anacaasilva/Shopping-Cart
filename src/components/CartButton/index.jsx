@@ -1,16 +1,21 @@
 import './CartButton.css';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { CgShoppingCart } from 'react-icons/cg';
 
+import { AppContext } from '../../context/AppContext';
+
 export const CartButton = () => {
+
+	const { cartItems } = useContext(AppContext);
+
 	return (
 		<button
 			type="button"
 			className="cartButton"
 		>
 			<CgShoppingCart />
-			<span className="cartStatus">1</span>
+			{ cartItems.length > 0 && <span className="cartStatus">{cartItems.length}</span> }
 		</button>
 	);
 };
