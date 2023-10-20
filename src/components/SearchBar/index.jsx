@@ -4,7 +4,6 @@ import React, { useState, useContext } from 'react';
 /** @name External */
 import { BsSearch } from 'react-icons/bs';
 import { fetchProducts } from '../../api/fetchProducts';
-/** @name Internal */
 import { AppContext } from '../../context/AppContext';
 
 export const SearchBar = () => {

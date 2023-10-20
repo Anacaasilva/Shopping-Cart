@@ -1,7 +1,7 @@
 import './Header.css';
-
+/** @name Dependencies */
 import React from 'react';
-
+/** @name Internal */
 import { SearchBar } from '../SearchBar';
 import { CartButton } from '../CartButton';
 

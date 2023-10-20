@@ -1,9 +1,9 @@
 import './ProductCard.css';
-
+/** @name Dependencies */
 import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 import { BsCartPlus } from 'react-icons/bs';
-
+/** @name External */
 import { formatCurrency } from '../../utils/formatCurrency';
 import { AppContext } from '../../context/AppContext';
 

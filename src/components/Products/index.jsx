@@ -1,11 +1,12 @@
 import './Products.css';
 /** @name Dependencies */
 import React, { useEffect, useContext } from 'react';
-/** @name Internal */
+/** @name External */
 import { fetchProducts } from '../../api/fetchProducts';
+import { AppContext } from '../../context/AppContext';
+/** @name Internal */
 import { ProductCard } from '../ProductCard';
 import { Loading } from '../Loading';
-import { AppContext } from '../../context/AppContext';
 
 export const Products = () => {
 
